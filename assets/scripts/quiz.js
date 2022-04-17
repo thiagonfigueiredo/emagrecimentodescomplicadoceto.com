@@ -105,7 +105,7 @@ class Quiz extends React.Component {
       return (
         <React.Fragment>
           <div className="quiz-title">
-            <h1>OBTENHA O SEU GUIA COMPLETO DE DIETA CETOGÊNICA</h1>
+            <h1>CALCULADORA EDC</h1>
           </div>
           <div className="quiz-header">Para começar, escolha seu sexo.</div>
           <div className="gender-container">
