@@ -92,11 +92,6 @@ class Quiz extends React.Component {
           });
 
           console.log("window", window.location)
-          
-          const url = promo
-            ? `/guia-completo-da-dieta-cetogenica/inscricao?promo=${promo}`
-            : "/guia-completo-da-dieta-cetogenica/inscricao";
-          window.location.href = url;
           // if () {
 
           // } else {
