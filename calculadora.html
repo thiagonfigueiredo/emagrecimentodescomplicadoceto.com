@@ -27,9 +27,10 @@
     <link href="./assets/css/obter-dieta.css" rel="stylesheet" />
     <!-- Scripts -->
     <script>
-        let user = {};
-        const saveUser = (userObj) => user = userObj;
-        const getUser = () => console.log("user", user)
+        function reload_js(src) {
+            $('script[src="' + src + '"]').remove();
+            $('<script>').attr('src', src).appendTo('head');
+        }
     </script>
     <!-- Google Tag Manager -->
     <script>

@@ -135,8 +135,6 @@ const cookies = document.cookie
     }),
     {}
   );
-  
-  getUser()
 
 if (cookies.name) {
   document.getElementById("name").innerHTML = `${cookies.name} `;

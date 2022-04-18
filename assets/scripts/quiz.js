@@ -4,8 +4,6 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 
 const promo = params.promo;
 
-const testUno = "uno";
-
 const setUserCookie = (user) => {
   document.cookie = `user=${JSON.stringify(user)}; expires=${new Date(
     new Date().getTime() + 30 * 60 * 1000
@@ -84,17 +82,16 @@ class Quiz extends React.Component {
         }
         this.setState({ error });
         if (Object.keys(error).length === 0) {
-          const user = {
+          setUserCookie({
             gender,
             activityLevel,
             age,
             height,
             weight,
             targetWeight,
-          };
-          setUserCookie(user);
-          saveUser(user)
+          });
           document.querySelector(".container-fluid").classList.remove("hide");
+          reload_js('./assets/scripts/calculadora.js');
         }
       }
     };
