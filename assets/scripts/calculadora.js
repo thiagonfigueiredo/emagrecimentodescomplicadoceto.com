@@ -252,3 +252,5 @@ if (cookies.user) {
   document.querySelector(".container-fluid").classList.add("hide");
   // window.location.href = "/guia-completo-da-dieta-cetogenica/obter-dieta";
 }
+
+console.log("testUno",testUno)

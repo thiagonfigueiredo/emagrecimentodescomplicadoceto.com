@@ -4,6 +4,8 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 
 const promo = params.promo;
 
+const testUno = "uno";
+
 const setUserCookie = (user) => {
   document.cookie = `user=${JSON.stringify(user)}; expires=${new Date(
     new Date().getTime() + 30 * 60 * 1000
@@ -90,6 +92,7 @@ class Quiz extends React.Component {
             weight,
             targetWeight,
           });
+          
           document.querySelector(".container-fluid").classList.remove("hide");
         }
       }
