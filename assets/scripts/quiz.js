@@ -90,6 +90,18 @@ class Quiz extends React.Component {
             weight,
             targetWeight,
           });
+
+          console.log("window", window.location)
+          
+          const url = promo
+            ? `/guia-completo-da-dieta-cetogenica/inscricao?promo=${promo}`
+            : "/guia-completo-da-dieta-cetogenica/inscricao";
+          window.location.href = url;
+          // if () {
+
+          // } else {
+
+          // }
           document.querySelector(".container-fluid").classList.remove("hide");
           reload_js('./assets/scripts/calculadora.js');
         }
