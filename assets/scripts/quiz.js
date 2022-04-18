@@ -84,15 +84,16 @@ class Quiz extends React.Component {
         }
         this.setState({ error });
         if (Object.keys(error).length === 0) {
-          setUserCookie({
+          const user = {
             gender,
             activityLevel,
             age,
             height,
             weight,
             targetWeight,
-          });
-          
+          };
+          setUserCookie(user);
+          saveUser(user)
           document.querySelector(".container-fluid").classList.remove("hide");
         }
       }

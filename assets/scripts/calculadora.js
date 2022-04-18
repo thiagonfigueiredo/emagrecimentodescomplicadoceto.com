@@ -135,6 +135,8 @@ const cookies = document.cookie
     }),
     {}
   );
+  
+  getUser()
 
 if (cookies.name) {
   document.getElementById("name").innerHTML = `${cookies.name} `;
@@ -252,5 +254,3 @@ if (cookies.user) {
   document.querySelector(".container-fluid").classList.add("hide");
   // window.location.href = "/guia-completo-da-dieta-cetogenica/obter-dieta";
 }
-
-console.log("testUno",testUno)
