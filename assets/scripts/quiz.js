@@ -91,7 +91,7 @@ class Quiz extends React.Component {
             targetWeight,
           });
 
-          if (window.location.pathname.split("/")[1] === "calculadora") {
+          if (window.location.pathname.split("/")[1].toLowerCase() === "calculadora") {
             document.querySelector(".container-fluid").classList.remove("hide");
             reload_js("./assets/scripts/calculadora.js");
           } else {
@@ -115,7 +115,7 @@ class Quiz extends React.Component {
       return (
         <React.Fragment>
           <div className="quiz-title">
-            <h1>CALCULADORA EDC</h1>
+            <h1>{window.location.pathname.split("/")[1].toLowerCase() === "calculadora" ? "CALCULADORA EDC" : "SELECIONE PARA CONTINUAR"}</h1>
           </div>
           <div className="quiz-header">Para começar, escolha seu sexo.</div>
           <div className="gender-container">
