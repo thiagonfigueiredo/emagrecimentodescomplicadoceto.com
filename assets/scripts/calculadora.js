@@ -249,5 +249,6 @@ if (cookies.user) {
   document.getElementById("activityLevel").innerHTML = user.activityLevel;
   document.getElementById("achievableWeight").innerHTML = achievableWeight;
 } else {
+  document.querySelector(".container-fluid").classList.add("hide");
   // window.location.href = "/guia-completo-da-dieta-cetogenica/obter-dieta";
 }

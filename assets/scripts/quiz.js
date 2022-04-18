@@ -90,6 +90,7 @@ class Quiz extends React.Component {
             weight,
             targetWeight,
           });
+          document.querySelector(".container-fluid").classList.remove("hide");
         }
       }
     };
