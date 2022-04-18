@@ -91,8 +91,8 @@ class Quiz extends React.Component {
             targetWeight,
           });
 
-          console.log("window", window.location.pathname.split("/")[0])
-          console.log("pathname comparison", window.location.pathname.split("/")[0] === "calculadora")
+          console.log("window", window.location.pathname.split("/"))
+          console.log("pathname comparison", window.location.pathname)
           // if () {
 
           // } else {
