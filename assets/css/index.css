@@ -52,7 +52,7 @@ body {
 .wrapper {
   width: 100%;
   min-height: 100vh;
-  background: url("../images/main-background.jpg") no-repeat;
+  /* background: url("../images/main-background.jpg") no-repeat; */
   background-size: 100% auto;
   padding-top: 10px;
 }
@@ -61,14 +61,16 @@ body {
   text-align: center;
   position: relative;
   font-size: 15px;
-  height: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .logo {
-  background: url("../images/logo.png") no-repeat center;
-  display: inline-block;
-  width: 306px;
-  height: 75px;
+  background: url("../images/confidential.png") no-repeat center;
+  background-size: contain;
+  display: flex;
+  width: 100%;
+  height: 200px;
 }
 
 .title {
@@ -155,16 +157,20 @@ span {
   margin-bottom: 20px;
 }
 
+.secret-title {
+}
+
 @media screen and (max-width: 420px) {
   .logo-container {
-    height: 25px;
+    height: 120px;
   }
   .logo {
     display: inline-block;
-    width: 40%;
-    height: 30px;
+    width: 80%;
+    height: 100px;
     background-size: 100%;
     margin-bottom: 0px;
+    padding-top: 0px;
     padding-bottom: 0px;
   }
 
