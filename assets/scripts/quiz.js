@@ -91,15 +91,15 @@ class Quiz extends React.Component {
             targetWeight,
           });
 
-          console.log("window", window.location.pathname.split("/"))
-          console.log("pathname comparison", window.location.pathname)
-          // if () {
-
-          // } else {
-
-          // }
-          document.querySelector(".container-fluid").classList.remove("hide");
-          reload_js('./assets/scripts/calculadora.js');
+          if (window.location.pathname.split("/")[1] === "calculadora") {
+            document.querySelector(".container-fluid").classList.remove("hide");
+            reload_js("./assets/scripts/calculadora.js");
+          } else {
+            const url = promo
+              ? `https://emagrecimentodescomplicadoceto.com?promo=${promo}`
+              : "https://emagrecimentodescomplicadoceto.com";
+            window.location.href = url;
+          }
         }
       }
     };
