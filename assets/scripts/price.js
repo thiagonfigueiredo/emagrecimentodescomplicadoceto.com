@@ -1,9 +1,3 @@
-const params = new Proxy(new URLSearchParams(window.location.search), {
-  get: (searchParams, prop) => searchParams.get(prop),
-});
-
-const promo = params.promo;
-
 const getPricePct = () => {
   switch (promo) {
     case "seu-sucesso":

@@ -1,16 +1,14 @@
-const getVideo = () => {
+const defaultVideo = () => {
   switch (promo) {
     case "seu-sucesso":
-      return "https://player.vimeo.com/video/685058936?h=be31fb0081";
+      return true;
     case "não-perca":
-      return "https://player.vimeo.com/video/685058976?h=f1410febf9";
+      return false;
     case "exclusiva":
-      return "https://player.vimeo.com/video/685058976?h=f1410febf9";
+      return true;
     default:
-      return "https://player.vimeo.com/video/685058976?h=f1410febf9";
+      return true;
   }
 };
 
-if (document.getElementById("video-vsl")) {
-  document.getElementById("video-vsl").setAttribute("src", getVideo());
-}
+const promoNaoPercaVideo = promo === "não-perca";

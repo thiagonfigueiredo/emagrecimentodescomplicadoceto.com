@@ -31,6 +31,7 @@
     />
     <script src="./assets/scripts/promo.js"></script>
     <!-- Google Tag Manager -->
+    <script src="./assets/scripts/video.js"></script>
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -66,20 +67,20 @@
       </div>
       <div class="video-container">
         <script type="text/javascript" id="scr_626a8e9173e6e9000b72fcc5">
-          if (!promo) {
-          var s = document.createElement("script");
-          s.src =
-            "https://scripts.converteai.net/fec0d61f-c2df-4eb3-8834-ad21bddd85f8/players/626a8e9173e6e9000b72fcc5/player.js";
-          s.async = !0;
+          if (defaultVideo()) {
+            var s = document.createElement("script");
+            s.src =
+              "https://scripts.converteai.net/fec0d61f-c2df-4eb3-8834-ad21bddd85f8/players/626a8e9173e6e9000b72fcc5/player.js";
+            s.async = !0;
             document.head.appendChild(s);
           }
         </script>
-        <script type="text/javascript" id="scr_626fbd536760b600098b4758">
-          if (promo === "não-perca") {
-          var s = document.createElement("script");
-          s.src =
-            "https://scripts.converteai.net/fec0d61f-c2df-4eb3-8834-ad21bddd85f8/players/626fbd536760b600098b4758/player.js";
-          s.async = !0;
+        <script type="text/javascript" id="scr_62702355034e4e000c11a243">
+          if (promoNaoPercaVideo) {
+            var s = document.createElement("script");
+            s.src =
+              "https://scripts.converteai.net/fec0d61f-c2df-4eb3-8834-ad21bddd85f8/players/62702355034e4e000c11a243/player.js";
+            s.async = !0;
             document.head.appendChild(s);
           }
         </script>
@@ -109,6 +110,5 @@
     </div>
     <script src="./assets/scripts/price.js"></script>
     <script src="./assets/scripts/positive-button.js"></script>
-    <script src="./assets/scripts/video.js"></script>
   </body>
 </html>
