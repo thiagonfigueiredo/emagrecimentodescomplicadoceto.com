@@ -1,9 +1,3 @@
-const params = new Proxy(new URLSearchParams(window.location.search), {
-  get: (searchParams, prop) => searchParams.get(prop),
-});
-
-const promo = params.promo;
-
 const setUserCookie = (user) => {
   document.cookie = `user=${JSON.stringify(user)}; expires=${new Date(
     new Date().getTime() + 30 * 60 * 1000
