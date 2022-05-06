@@ -57,6 +57,16 @@ body {
   padding-top: 10px;
 }
 
+section {
+  margin-top: 50px;
+  background-color: white;
+}
+
+.centering {
+  display: flex;
+  justify-content: center;
+}
+
 .logo-container {
   text-align: center;
   position: relative;
@@ -166,6 +176,11 @@ span {
 }
 
 .secret-title {
+}
+
+.fb-afiliado {
+  font-size: 10px;
+  color: #212d3b
 }
 
 @media screen and (max-width: 420px) {
