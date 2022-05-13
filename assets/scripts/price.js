@@ -70,7 +70,8 @@ if (document.getElementById("positive-button")) {
     .getElementById("positive-button")
     .setAttribute(
       "href",
-      getPromoUrl(getPromoPrice())
+      getPromoPrice() + window.location.search
+      // getPromoUrl()
     );
 }
 
