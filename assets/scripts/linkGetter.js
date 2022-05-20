@@ -31,7 +31,7 @@ const reset = () => {
 };
 
 const handleGerarUrl = () => {
-  let params = "&src=fb";
+  let params = "?src=fb";
   if (perfil.value.length > 0) {
     params += `&utm_source=pf-${perfil.value}`;
     if (bm.value.length > 0) {
@@ -55,7 +55,7 @@ const handleGerarUrl = () => {
   }
   url.setAttribute(
     "value",
-    `${window.location.origin}?promo=não-perca${params ? params : ""}`
+    `${window.location.origin}${params ? params : ""}`
   );
   copyToClipboard();
 };

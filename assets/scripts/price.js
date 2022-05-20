@@ -40,13 +40,13 @@ const getPromoUrl = (url) => {
 const getPromoPrice = () => {
   switch (promo) {
     case "seu-sucesso":
-      return "https://pay.kiwify.com.br/18TaVUG";
+      return "https://ev.braip.com/checkout/pla2g2xz/che0e55n";
     case "não-perca":
-      return "https://pay.kiwify.com.br/ojjkYNG";
+      return "https://ev.braip.com/checkout/pla2g2xz/che0e55n";
     case "exclusiva":
-      return "https://pay.kiwify.com.br/mER6SYO";
+      return "https://ev.braip.com/checkout/pla2g2xz/che0e55n";
     default:
-      return "https://pay.kiwify.com.br/3y076YL";
+      return "https://ev.braip.com/checkout/pla2g2xz/che0e55n";
   }
 };
 
