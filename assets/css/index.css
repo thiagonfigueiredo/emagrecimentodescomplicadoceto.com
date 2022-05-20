@@ -183,6 +183,21 @@ span {
   color: #212d3b
 }
 
+.cta-acesso {
+  display: flex;
+  flex-direction: column;
+}
+
+.acesso {
+  max-width: 600px;
+
+}
+
+.acesso-email {
+  font-weight: 600;
+  padding-top: 6px;
+}
+
 @media screen and (max-width: 420px) {
   .logo-container {
     height: 120px;

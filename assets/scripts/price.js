@@ -75,6 +75,16 @@ if (document.getElementById("positive-button")) {
     );
 }
 
+if (document.getElementById("positive-button2")) {
+  document
+    .getElementById("positive-button2")
+    .setAttribute(
+      "href",
+      getPromoPrice() + window.location.search
+      // getPromoUrl()
+    );
+}
+
 if (document.getElementById("vsl-read")) {
   document
     .getElementById("vsl-read")
