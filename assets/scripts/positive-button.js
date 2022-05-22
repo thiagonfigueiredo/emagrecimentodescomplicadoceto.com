@@ -2,10 +2,10 @@ document.getElementById("cta1").style.display = "none";
 setTimeout(() => {
   document.getElementById("cta1").style.display = "block";
   document.getElementById("sub-header").style.display = "none";
-}, 1380000);
+}, 1200000);
 
 document.getElementById("positive-button2").style.display = "none";
 setTimeout(() => {
   document.getElementById("positive-button2").style.display = "inline-block";
-}, 1380000);
+}, 1200000);
 
