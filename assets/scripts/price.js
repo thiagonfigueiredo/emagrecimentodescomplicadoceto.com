@@ -40,13 +40,13 @@ const getPromoUrl = (url) => {
 const getPromoPrice = () => {
   switch (promo) {
     case "seu-sucesso":
-      return "https://ev.braip.com/checkout/pla2g2xz/che0e55n";
+      return "https://ev.braip.com/checkout/pla2g96z/che0e55n";
     case "não-perca":
-      return "https://ev.braip.com/checkout/pla2g2xz/che0e55n";
+      return "https://ev.braip.com/checkout/pla2g96z/che0e55n";
     case "exclusiva":
-      return "https://ev.braip.com/checkout/pla2g2xz/che0e55n";
+      return "https://ev.braip.com/checkout/pla2g96z/che0e55n";
     default:
-      return "https://ev.braip.com/checkout/pla2g2xz/che0e55n";
+      return "https://ev.braip.com/checkout/pla2g96z/che0e55n";
   }
 };
 
