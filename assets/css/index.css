@@ -100,7 +100,6 @@ section {
 h1 {
   text-align: center;
   text-transform: uppercase;
-  max-width: 80%;
   display: inline-block;
   font-weight: 800;
 }
@@ -186,6 +185,18 @@ span {
 .cta-acesso {
   display: flex;
   flex-direction: column;
+}
+
+.cta-acesso img {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.cta-acesso-bonus {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .acesso {
