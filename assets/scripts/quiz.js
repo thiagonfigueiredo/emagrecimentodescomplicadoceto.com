@@ -178,7 +178,7 @@ class Quiz extends React.Component {
     };
 
     const thirdStep = () => {
-      const goNext = (activityLevel) => stepForward();
+      const goNext = () => stepForward();
       return (
         <React.Fragment>
           <div className="quiz-title">
@@ -295,7 +295,7 @@ class Quiz extends React.Component {
     const stepMap = {
       0: initialStep,
       1: secondStep,
-      2: thirdStep,
+      // 2: thirdStep,
     };
 
     const renderStep = () => {
