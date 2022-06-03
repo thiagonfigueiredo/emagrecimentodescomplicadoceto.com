@@ -5,7 +5,7 @@ const setUserCookie = (user) => {
 };
 class Quiz extends React.Component {
   state = {
-    stepsTotal: 2,
+    stepsTotal: 1,
     currentStep: 0,
     gender: "",
     activityLevel: "",
