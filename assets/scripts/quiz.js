@@ -41,10 +41,6 @@ class Quiz extends React.Component {
     const stepForward = () => {
       if (currentStep < stepsTotal) {
         this.setState({ currentStep: currentStep + 1 });
-        if (currentStep === 1 && !isCalculadora) {
-          const url = `https://emagrecimentodescomplicadoceto.com${window.location.search}`;
-          window.location.href = url;
-        }
       } else {
         if (isCalculadora) {
           let error = {};
@@ -189,7 +185,28 @@ class Quiz extends React.Component {
     };
 
     const thirdStep = () => {
-      const goNext = (activityLevel) => stepForward();
+      const goNext = () => stepForward();
+
+      if(!isCalculadora) {
+        return (
+          <React.Fragment>
+            <div className="quiz-title">
+              <h1>Parabéns por chegar até aqui</h1>
+            </div>
+            <div className="quiz-header">Baseado nas suas respostas você está qualificada!</div>
+            <div className="text-center">
+              <div
+                class="positive-gradient btn positive-button disabld"
+                id="positive-button"
+                onClick={goNext}
+              >
+                QUERO ASSISTIR O VÍDEO AGORA!
+              </div>
+            </div>
+          </React.Fragment>
+        );
+      }
+      
       return (
         <React.Fragment>
           <div className="quiz-title">
