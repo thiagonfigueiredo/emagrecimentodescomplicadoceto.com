@@ -250,6 +250,10 @@ img {
   padding-top: 6px;
 }
 
+.resultado-mobile {
+  display: none;
+}
+
 @media screen and (max-width: 420px) {
   .logo-container {
     height: 120px;
@@ -272,5 +276,13 @@ img {
   }
   h1 {
     font-size: 22px;
+  }
+
+  .resultado {
+    display: none;
+  }
+
+  .resultado-mobile {
+    display: block;
   }
 }
