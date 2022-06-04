@@ -41,6 +41,8 @@ class Quiz extends React.Component {
         const isCalculadora =
           window.location.pathname.split("/")[1].toLowerCase() ===
           "calculadora";
+
+          console.log("calculadora", isCalculadora)
         if (isCalculadora) {
           let error = {};
           if (age >= 14) {
