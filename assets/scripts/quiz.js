@@ -45,6 +45,7 @@ class Quiz extends React.Component {
               ? `https://emagrecimentodescomplicadoceto.com?promo=${promo}`
               : "https://emagrecimentodescomplicadoceto.com";
             window.location.href = url;
+            break;
         }
       } else {
         let error = {};
