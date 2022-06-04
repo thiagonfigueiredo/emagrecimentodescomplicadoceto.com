@@ -41,68 +41,69 @@ class Quiz extends React.Component {
     const stepForward = () => {
       if (currentStep < stepsTotal) {
         this.setState({ currentStep: currentStep + 1 });
-      } else if (currentStep === 1 && !isCalculadora) {
-        const url = promo
-          ? `https://emagrecimentodescomplicadoceto.com?promo=${promo}`
-          : "https://emagrecimentodescomplicadoceto.com";
-        window.location.href = url;
+        if (currentStep === 1 && !isCalculadora) {
+          const url = promo
+            ? `https://emagrecimentodescomplicadoceto.com?promo=${promo}`
+            : "https://emagrecimentodescomplicadoceto.com";
+          window.location.href = url;
+        }
       } else {
-        let error = {};
-        if (age >= 14) {
-          delete error.age;
-        } else {
-          error = {
-            ...error,
-            age: "A idade precisa ser 14 anos ou superior",
-          };
-        }
-
-        if (height >= 130) {
-          delete error.height;
-        } else {
-          error = {
-            ...error,
-            height: "Insira um valor maior ou igual a 130",
-          };
-        }
-
-        if (weight >= 40) {
-          delete error.weight;
-        } else {
-          error = {
-            ...error,
-            weight: "Insira um valor maior ou igual a 40",
-          };
-        }
-
-        if (targetWeight >= 40) {
-          delete error.targetWeight;
-        } else {
-          error = {
-            ...error,
-            targetWeight: "Insira um valor maior ou igual a 40",
-          };
-        }
-        this.setState({ error });
-        if (Object.keys(error).length === 0) {
-          setUserCookie({
-            gender,
-            activityLevel,
-            age,
-            height,
-            weight,
-            targetWeight,
-          });
-
-          if (isCalculadora) {
-            document.querySelector(".container-fluid").classList.remove("hide");
-            reload_js("./assets/scripts/calculadora.js");
+        if (isCalculadora) {
+          let error = {};
+          if (age >= 14) {
+            delete error.age;
           } else {
-            const url = promo
-              ? `https://emagrecimentodescomplicadoceto.com?promo=${promo}`
-              : "https://emagrecimentodescomplicadoceto.com";
-            window.location.href = url;
+            error = {
+              ...error,
+              age: "A idade precisa ser 14 anos ou superior",
+            };
           }
+
+          if (height >= 130) {
+            delete error.height;
+          } else {
+            error = {
+              ...error,
+              height: "Insira um valor maior ou igual a 130",
+            };
+          }
+
+          if (weight >= 40) {
+            delete error.weight;
+          } else {
+            error = {
+              ...error,
+              weight: "Insira um valor maior ou igual a 40",
+            };
+          }
+
+          if (targetWeight >= 40) {
+            delete error.targetWeight;
+          } else {
+            error = {
+              ...error,
+              targetWeight: "Insira um valor maior ou igual a 40",
+            };
+          }
+          this.setState({ error });
+          if (Object.keys(error).length === 0) {
+            setUserCookie({
+              gender,
+              activityLevel,
+              age,
+              height,
+              weight,
+              targetWeight,
+            });
+          }
+
+          document.querySelector(".container-fluid").classList.remove("hide");
+          reload_js("./assets/scripts/calculadora.js");
+        } else {
+          const url = promo
+            ? `https://emagrecimentodescomplicadoceto.com?promo=${promo}`
+            : "https://emagrecimentodescomplicadoceto.com";
+          window.location.href = url;
         }
       }
     };
