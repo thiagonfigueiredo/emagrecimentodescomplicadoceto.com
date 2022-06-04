@@ -4,7 +4,8 @@ const setUserCookie = (user) => {
   ).toGMTString()}; path=/`;
 };
 
-const isCalculadora = window.location.pathname.split("/")[1].toLowerCase() === "calculadora";
+const isCalculadora =
+  window.location.pathname.split("/")[1].toLowerCase() === "calculadora";
 
 class Quiz extends React.Component {
   state = {
@@ -40,13 +41,11 @@ class Quiz extends React.Component {
     const stepForward = () => {
       if (currentStep < stepsTotal) {
         this.setState({ currentStep: currentStep + 1 });
-        if(currentStep === 1 && !isCalculadora) {
-          const url = promo
-              ? `https://emagrecimentodescomplicadoceto.com?promo=${promo}`
-              : "https://emagrecimentodescomplicadoceto.com";
-            window.location.href = url;
-            break;
-        }
+      } else if (currentStep === 1 && !isCalculadora) {
+        const url = promo
+          ? `https://emagrecimentodescomplicadoceto.com?promo=${promo}`
+          : "https://emagrecimentodescomplicadoceto.com";
+        window.location.href = url;
       } else {
         let error = {};
         if (age >= 14) {
@@ -119,7 +118,12 @@ class Quiz extends React.Component {
       return (
         <React.Fragment>
           <div className="quiz-title">
-            <h1>{window.location.pathname.split("/")[1].toLowerCase() === "calculadora" ? "CALCULADORA EDC" : "SELECIONE PARA CONTINUAR"}</h1>
+            <h1>
+              {window.location.pathname.split("/")[1].toLowerCase() ===
+              "calculadora"
+                ? "CALCULADORA EDC"
+                : "SELECIONE PARA CONTINUAR"}
+            </h1>
           </div>
           <div className="quiz-header">Para começar, escolha seu sexo.</div>
           <div className="gender-container">
