@@ -42,9 +42,7 @@ class Quiz extends React.Component {
       if (currentStep < stepsTotal) {
         this.setState({ currentStep: currentStep + 1 });
         if (currentStep === 1 && !isCalculadora) {
-          const url = promo
-            ? `https://emagrecimentodescomplicadoceto.com?promo=${promo}`
-            : "https://emagrecimentodescomplicadoceto.com";
+          const url = `https://emagrecimentodescomplicadoceto.com${window.location.search}`;
           window.location.href = url;
         }
       } else {
