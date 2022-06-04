@@ -75,6 +75,16 @@ if (document.getElementById("positive-button")) {
     );
 }
 
+if (document.getElementById("positive-resultados")) {
+  document
+    .getElementById("positive-resultados")
+    .setAttribute(
+      "href",
+      getPromoPrice() + window.location.search
+      // getPromoUrl()
+    );
+}
+
 if (document.getElementById("positive-bonus")) {
   document
     .getElementById("positive-bonus")
