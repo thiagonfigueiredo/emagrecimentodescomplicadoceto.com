@@ -100,9 +100,7 @@ class Quiz extends React.Component {
           document.querySelector(".container-fluid").classList.remove("hide");
           reload_js("./assets/scripts/calculadora.js");
         } else {
-          const url = promo
-            ? `https://emagrecimentodescomplicadoceto.com?promo=${promo}`
-            : "https://emagrecimentodescomplicadoceto.com";
+          const url = `https://emagrecimentodescomplicadoceto.com${window.location.search}`;
           window.location.href = url;
         }
       }
