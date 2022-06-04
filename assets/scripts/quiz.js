@@ -3,9 +3,14 @@ const setUserCookie = (user) => {
     new Date().getTime() + 30 * 60 * 1000
   ).toGMTString()}; path=/`;
 };
+
+const isCalculadora =
+  window.location.pathname.split("/")[1].toLowerCase() ===
+  "calculadora";
+  
 class Quiz extends React.Component {
   state = {
-    stepsTotal: 1,
+    stepsTotal: isCalculadora ? 2 : 1,
     currentStep: 0,
     gender: "",
     activityLevel: "",
@@ -38,9 +43,6 @@ class Quiz extends React.Component {
       if (currentStep < stepsTotal) {
         this.setState({ currentStep: currentStep + 1 });
       } else {
-        const isCalculadora =
-          window.location.pathname.split("/")[1].toLowerCase() ===
-          "calculadora";
 
           console.log("calculadora", isCalculadora)
         if (isCalculadora) {
