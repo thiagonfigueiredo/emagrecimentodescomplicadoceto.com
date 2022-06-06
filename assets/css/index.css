@@ -228,13 +228,14 @@ span {
 
 .cta-resultados {
   margin-top: 20px;
+  display: none;
 }
+
 img {
   padding: 0px;
 }
 
 .column {
-  display: flex;
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
